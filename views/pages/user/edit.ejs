@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<main>
+    <div class="jumbotron">
+	<h1>Edit User</h1>
+	<form action="/users/<%=user._id %>" method="POST">
+		<div class="input-group">
+			<label>Name</label>
+			<input type="text" name="name" value="<%=user.name %>">
+			<input type="hidden" name="_id" value="<%=user._id %>">
+		</div>
+
+		<div class="input-group">
+			<label>Email</label>
+			<input type="text" name="email" value="<%=user.email %>">
+		</div>
+
+		<button type="submit">Update</button>
+		<a href="/users">Kembali</a>	
+	</main>
+	</form>
+	<footer>
+		<p class="text-center text-muted">© Copyright 2021 Tiana Adela Pratiwi</p>
+	</footer>
